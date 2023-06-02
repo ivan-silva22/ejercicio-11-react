@@ -1,6 +1,8 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Titulo from './Titulo';
+import Container from 'react-bootstrap/Container';
+import Titulo from './components/Titulo';
+import Formulario from './components/Formulario';
 
 function App() {
   
@@ -8,7 +10,9 @@ function App() {
   return (
     <section>
       <Titulo/>
-      
+      <Container>
+        <Formulario/>
+      </Container>
     </section>
   )
 }
