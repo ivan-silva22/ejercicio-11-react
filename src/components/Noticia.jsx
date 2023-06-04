@@ -1,21 +1,24 @@
-import { Col, Card, CardImg, Button } from "react-bootstrap";
+import { Card, Button, Col } from "react-bootstrap";
+import { PropTypes } from "prop-types";
 
-const Noticia = () => {
+const Noticia = ({ articulo }) => {
+  console.log(articulo);
   return (
     <Col>
-      <Card>
-        <CardImg variant="top" src="holder.js/100px180" />
+      <Card style={{ width: "18rem" }} className="mt-3 rounded shadow mx-auto">
+        <Card.Img variant="top" src={articulo.image_url} title={articulo.title} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the cards content.
-          </Card.Text>
+          <Card.Title>{articulo.title}</Card.Title>
+          
           <Button variant="primary">Ver noticia</Button>
         </Card.Body>
       </Card>
     </Col>
   );
+};
+
+Noticia.propTypes = {
+  articulo: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Noticia;
