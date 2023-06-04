@@ -2,7 +2,7 @@ import { PropTypes } from "prop-types";
 import Noticia from "./Noticia";
 import { Row, Container } from "react-bootstrap";
 
-const ListaNoticias = ({ noticia }) => {
+const ListaNoticias = ({ noticia}) => {
   return (
     <Container className="mt-5" fluid="md">
       <Row>

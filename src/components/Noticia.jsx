@@ -2,7 +2,7 @@ import { Card, Button, Col } from "react-bootstrap";
 import { PropTypes } from "prop-types";
 
 const Noticia = ({ articulo }) => {
-  console.log(articulo);
+  
   return (
     <Col>
       <Card style={{ width: "18rem" }} className="mt-3 rounded shadow mx-auto">
